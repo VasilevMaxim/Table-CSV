@@ -33,6 +33,8 @@ public:
 	void SetValue(const string& value, int numRow, int numColumn);
 	void SetValue(const string& value, pair<int, int> cell);
 
+	bool IsValue(int numRow, int numColumn);
+
 	void RemoveAt(int numRow, int numColumn);
 
 	void SaveTable(const string& pathFile);

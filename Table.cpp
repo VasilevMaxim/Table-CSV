@@ -56,6 +56,19 @@ void Table::SetValue(const string& value, pair<int, int> cell)
 	SetValue(value, cell.first, cell.second);
 }
 
+bool Table::IsValue(int numRow, int numColumn)
+{
+	try
+	{
+		_table.at(make_pair(numRow, numColumn));
+		return true;
+	}
+	catch (std::out_of_range e)
+	{
+		return false;
+	}
+}
+
 void Table::RemoveAt(int numRow, int numColumn)
 {
 	auto iter = _table.begin();
